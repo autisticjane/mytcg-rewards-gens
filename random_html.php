@@ -1,5 +1,6 @@
-<?php include("mytcg/settings.php");
-include("$header");
+<?php
+	include("mytcg/settings.php");
+	include("$header");
 ?>
 <h1>HTML Generator</h1>
 <div class="random-generator">
@@ -38,7 +39,7 @@ if($_SERVER['QUERY_STRING']=="pickup") {
 				$_POST[$key] = stripslashes(strip_tags($value));
 			}
 				?>
-<div class="random-results">
+<div class="random-rewards">
 	<textarea onclick="this.focus();this.select()" style="width: 75%;">
 		<?php
 			echo "<img src=\"/cards/";
@@ -52,5 +53,5 @@ if($_SERVER['QUERY_STRING']=="pickup") {
 				<?php
 			}
 }
-include("$footer");
+	include("$footer");
 ?>
