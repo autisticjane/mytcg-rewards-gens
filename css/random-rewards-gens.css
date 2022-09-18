@@ -1,0 +1,10 @@
+.random-gen {
+	clear:both;
+}
+.random-gen > label {
+	font-weight: 600
+}
+.random-rewards{
+	clear:both;
+	text-align: center
+}
