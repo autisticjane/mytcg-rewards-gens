@@ -45,6 +45,8 @@ $result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='1'") or die("Un
 
 The difference between `random_bb.php` and `random_forum.php` is that `random_bb.php` already has these edits.
 
+{&uarr; [top](#mtcg-rewards-gens)}
+
 ### HTML generator
 (`gen_html.php`)
 
@@ -58,7 +60,11 @@ So `apples01, bananas02, cauliflower03` might turn into
 
 It will not spit out the reward name.
 
-I don't remember what this one was used for in the past, but I recommend not using it since it's not accessible. Putting the card name in the `ALT` attribute is crucial to both disabled players and players with bad internet connection -- or for any player who struggles, for whatever reason, to load all of the cards. It's only in this repository so I can say, in the future, that *all my randomizers* are here.
+I don't remember what this one was used for in the past, but I recommend not using it since it's not accessible. Putting the card name in the `ALT` attribute is crucial to both disabled players and players with bad internet connection -- or for any player who struggles, for whatever reason, to load all of the cards.
+
+It's only in this repository so I can say, in the future, that *all my randomizers* are here.
+
+{&uarr; [top](#mtcg-rewards-gens)}
 
 ### Update randomizer
 (`random_update.php`)
@@ -80,10 +86,14 @@ A full URL for this might look like: `https://tv.tcg.mer.media/random_update.php
 
 The parameters do **not** have to be defined in order.
 
+{&uarr; [top](#mtcg-rewards-gens)}
+
 #### Troubleshoot
 Recently released decks must have a recently created ID in the database, or else this randomizer will not work.
 
 In other words, if your deck list is set up to have a `released` and `unreleased` dropdown instead of using an upcoming table and a released cards table, you will not be able to use this randomizer.
+
+{&uarr; [top](#mtcg-rewards-gens)}
 
 ## Custom styling
 Include the provided CSS file in your header, or add the styling to your `style.css`. The randomizers will function without this, they just might not look as pretty.
@@ -149,3 +159,5 @@ The quick, brown fox
 Jumped over
 The lazy dog.
 ````
+
+{&uarr; [top](#mtcg-rewards-gens)}
