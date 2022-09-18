@@ -4,7 +4,37 @@ Various MyTCG reward generators from Zest TCG.
 ## Using the generators
 These might not work with your code today.
 
-### Update randomizer (``random_update.php``)
+They have not been tested since Zest ended and won't be tested until my new TCG is up. Other edits will be made in the future, and this README will change accordingly. For one, I plan to use flexboxes or CSS grid for the forms instead. Right now, these are just quick uploads.
+
+### bbcode randomizer (`random_forum.php` & `random_bb.php`)
+If you only have one card worth (no cards worth 2), use `random_bb.php`. You can edit `random_forum.php` to work with your TCG regardless, but it will be quicker to just choose `random_bb.php`.
+
+If you choose to edit `random_forum.php` instead, remove lines 11-16:
+
+````
+			<tr><td><label for="type">Type of Cards?</label></b></td><td><select id="type" name="type">
+			<option value="">-------</option>
+			<option value="1">Regular</option>
+			<option value="2">Special</option>
+			<option value="1' OR `worth`='2">Both</option>			
+			</select></td></tr>
+````
+
+On Line 31, you need to change `{$_POST['type']}` to `1`. Or, delete this line:
+
+````
+			$result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='{$_POST['type']}'") or die("Unable to select from database.");
+````
+
+and replace it with this one:
+
+````
+			$result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='1'") or die("Unable to select from database.");
+````
+
+The difference between `random_bb.php` and `random_forum.php` is that `random_bb.php` already has these edits.
+
+### Update randomizer (`random_update.php`)
 You will need to define the ``count`` and ``date`` parameters in the URL in order for the update randomizer to work. It will only work for the most recent update and will always pull only one from each deck recently released.
 
 Initiate the usage of parameters by adding a question mark (`?`) before the first parameter and using ampersand (`&`) to include more parameters.
@@ -27,8 +57,8 @@ Recently released decks must have a recently created ID in the database, or else
 
 In other words, if your deck list is set up to have a `released` and `unreleased` dropdown instead of using an upcoming table and a released cards table, you will not be able to use this randomizer.
 
-### Custom styling
-Include the provided CSS file in your header, or add the styling to your `style.css`.
+## Custom styling
+Include the provided CSS file in your header, or add the styling to your `style.css`. The randomizers will function without this, they just might not look as pretty.
 
 Add this line to your header, between the ``<head>`` and ``</head>`` tags, somewhere under the ``</title>`` tag.
 
