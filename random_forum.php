@@ -7,7 +7,7 @@ if(!$_SERVER['QUERY_STRING']) {
 <div class="random-gen">
 	<form method="post" action="<?php $_SERVER['PHP_SELF'];?>?pickup">
 		<table width="100%">
-			<tr><td><label for="name">Activity:</label></td><td><input id="name" type="text" name="name" value="" /></td></tr>
+			<tr><td><label for="name">Activity:</label></td><td><input id="activity" type="text" name="activity" value="" /></td></tr>
 			<tr><td><label for="type">Type of Cards?</label></b></td><td><select id="type" name="type">
 			<option value="">-------</option>
 			<option value="1">Regular</option>
@@ -24,7 +24,7 @@ if(!$_SERVER['QUERY_STRING']) {
 
 elseif($_SERVER['QUERY_STRING']=="pickup") {
 				?>
-				<h1>Activity Rewards</h1>
+				<h1>Activity rewards</h1>
 <div class="random-rewards">
 	<textarea onclick="this.focus();this.select()" style="width: 75%;" rows="5">
 		<?php
@@ -42,11 +42,11 @@ elseif($_SERVER['QUERY_STRING']=="pickup") {
 						$_digits = $digits;
 					}
 					$card = "$row[filename]$_digits";
-					echo "$tcgcardurl$card.png";
+					echo "[img]$tcgcardurl$card.png[/img]";
 					$rewards1 .= $card.", ";
 				}
 			$rewards1 = substr_replace($rewards1,"",-2);
-			echo "{$_POST['name']}: $rewards1";
+			echo "{$_POST['activity']}: $rewards1";
 		?>
 	</textarea>
 
