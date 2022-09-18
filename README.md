@@ -53,12 +53,12 @@ The HTML generator spits the card names out in HTML form.
 So `apples01, bananas02, cauliflower03` might turn into
 
 ````
-<img src="https://food.tcg.mer.media/cards/apples01.png" alt="apples01" /> <img src="https://food.tcg.mer.media/cards/bananas02.png" alt="bananas02" /> <img src="https://food.tcg.mer.media/cards/cauliflower03.png" alt="cauliflower03" /> 
+<img src="https://food.tcg.mer.media/cards/apples01.png" /> <img src="https://food.tcg.mer.media/cards/bananas02.png" /> <img src="https://food.tcg.mer.media/cards/cauliflower03.png" /> 
 ````
 
 It will not spit out the reward name.
 
-I don't remember what this one was used for in the past.
+I don't remember what this one was used for in the past, but I recommend not using it since it's not accessible. Putting the card name in the `ALT` attribute is crucial to both disabled players and players with bad internet connection -- or for any player who struggles, for whatever reason, to load all of the cards. It's only in this repository so I can say, in the future, that *all my randomizers* are here.
 
 ### Update randomizer
 (`random_update.php`)
