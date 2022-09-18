@@ -1,4 +1,4 @@
-# mtcg-rewards-generator
+# mtcg-rewards-gens
 Various MyTCG reward generators.
 
 ## Using the generators
@@ -34,3 +34,49 @@ Add this line to your header, between the ``<head>`` and ``</head>`` tags, somew
 ```
   <link rel="stylesheet" href="css/random-generators.css" type="text/css" media="screen">
 ```
+
+For consistency, every randomizer in this repository uses the following classes:
+
+````
+.random-gen {}
+.random-gen > label {}
+.random-gen-rewards {}
+````
+
+All text is wrapped in `p` tags, instead of relying on a lot of really bad, invalid `<br />` styling involved in old MyTCG files (and even in some scripts following). The proper way to use `<p>` is as follows:
+
+````<p>Some text here.</p>
+<p>Oh, look! Another line!</p>````
+
+That spits out:
+
+````Some text here.
+
+Oh, look! Another line!````
+
+The wrong way to use it is as follows:
+
+````<p>Opening a paragraph, but...<br /><br />
+<p>Not closing it and opening a new one instead?<br /><br />
+<p>No, no, no...<br /><br />````
+
+Paragraph tags do pretty much the *same thing* as `<br />`, but WAY BETTER with more efficiency. Browsers *read* code and display it accordingly. Some browsers might not do this and just...won't display it at all. Slow internet definitely won't. More than that, it's simply not accessible.
+
+You *can* use `<p>` and `<br />` together. Look at this example. This code:
+
+````<p>The quick, brown fox?</p>
+<p>Yeah, he jumped over the lazy dog.</p>
+
+<p>The quick, brown fox<br />
+Jumped over<br />
+The lazy dog.</p>````
+
+spits out:
+
+````The quick, brown fox?
+
+Yeah, he jumped over the lazy dog.
+
+The quick, brown fox
+Jumped over
+The lazy dog.````
