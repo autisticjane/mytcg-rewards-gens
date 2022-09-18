@@ -12,24 +12,24 @@ If you only have one card worth (no cards worth 2), use `random_bb.php`. You can
 If you choose to edit `random_forum.php` instead, remove lines 11-16:
 
 ````
-			<tr><td><label for="type">Type of Cards?</label></b></td><td><select id="type" name="type">
-			<option value="">-------</option>
-			<option value="1">Regular</option>
-			<option value="2">Special</option>
-			<option value="1' OR `worth`='2">Both</option>			
-			</select></td></tr>
+<tr><td><label for="type">Type of Cards?</label></b></td><td><select id="type" name="type">
+<option value="">-------</option>
+<option value="1">Regular</option>
+<option value="2">Special</option>
+<option value="1' OR `worth`='2">Both</option>			
+</select></td></tr>
 ````
 
 On Line 31, you need to change `{$_POST['type']}` to `1`. Or, delete this line:
 
 ````
-			$result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='{$_POST['type']}'") or die("Unable to select from database.");
+$result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='{$_POST['type']}'") or die("Unable to select from database.");
 ````
 
 and replace it with this one:
 
 ````
-			$result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='1'") or die("Unable to select from database.");
+$result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='1'") or die("Unable to select from database.");
 ````
 
 The difference between `random_bb.php` and `random_forum.php` is that `random_bb.php` already has these edits.
