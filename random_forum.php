@@ -7,7 +7,7 @@ if(!$_SERVER['QUERY_STRING']) {
 <div class="random-gen">
 	<form method="post" action="<?php $_SERVER['PHP_SELF'];?>?pickup">
 		<table width="100%">
-			<tr><td><label for="name">Activity:</label></td><td><input id="activity" type="text" name="activity" value="" /></td></tr>
+			<tr><td><label for="activity">Activity:</label></td><td><input id="activity" type="text" name="activity" value="" /></td></tr>
 			<tr><td><label for="type">Type of Cards?</label></b></td><td><select id="type" name="type">
 			<option value="">-------</option>
 			<option value="1">Regular</option>
