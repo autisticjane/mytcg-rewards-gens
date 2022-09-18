@@ -1,12 +1,23 @@
 # mtcg-rewards-gens
 Various MyTCG reward generators from Zest TCG.
 
+## Table of contents
+* [Using the generators/randomizers](#using-the-generators)
+* [bbcode randomizer](#bbcode-randomizer)
+* [HTML generator](#html-generator)
+* [Update randomizer](#update-randomizer)
+* [Custom styling](#custom-styling)
+
 ## Using the generators
 These might not work with your code today.
 
 They have not been tested since Zest ended and won't be tested until my new TCG is up. Other edits will be made in the future, and this README will change accordingly. For one, I plan to use flexboxes or CSS grid for the forms instead. Right now, these are just quick uploads.
 
-### bbcode randomizer (`random_forum.php` & `random_bb.php`)
+{&uarr; [top](#mtcg-rewards-gens)}
+
+### bbcode randomizer
+(`random_forum.php` & `random_bb.php`)
+
 If you only have one card worth (no cards worth 2), use `random_bb.php`. You can edit `random_forum.php` to work with your TCG regardless, but it will be quicker to just choose `random_bb.php`.
 
 If you choose to edit `random_forum.php` instead, remove lines 11-16:
@@ -34,7 +45,9 @@ $result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='1'") or die("Un
 
 The difference between `random_bb.php` and `random_forum.php` is that `random_bb.php` already has these edits.
 
-### HTML generator (`gen_html.php`)
+### HTML generator
+(`gen_html.php`)
+
 The HTML generator spits the card names out in HTML form.
 
 So `apples01, bananas02, cauliflower03` might turn into
@@ -47,7 +60,9 @@ It will not spit out the reward name.
 
 I don't remember what this one was used for in the past.
 
-### Update randomizer (`random_update.php`)
+### Update randomizer
+(`random_update.php`)
+
 You will need to define the ``count`` and ``date`` parameters in the URL in order for the update randomizer to work. It will only work for the most recent update and will always pull only one from each deck recently released.
 
 Initiate the usage of parameters by adding a question mark (`?`) before the first parameter and using ampersand (`&`) to include more parameters.
