@@ -1,7 +1,8 @@
 # mtcg-rewards-gens
-Various MyTCG reward generators.
+Various MyTCG reward generators from Zest TCG.
 
 ## Using the generators
+These might not work with your code today.
 
 ### Update randomizer (``random_update.php``)
 You will need to define the ``count`` and ``date`` parameters in the URL in order for the update randomizer to work. It will only work for the most recent update and will always pull only one from each deck recently released.
