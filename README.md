@@ -34,6 +34,19 @@ $result=mysql_query("SELECT * FROM `$table_cards` WHERE `worth`='1'") or die("Un
 
 The difference between `random_bb.php` and `random_forum.php` is that `random_bb.php` already has these edits.
 
+### HTML generator (`gen_html.php`)
+The HTML generator spits the card names out in HTML form.
+
+So `apples01, bananas02, cauliflower03` might turn into
+
+````
+<img src="https://food.tcg.mer.media/cards/apples01.png" alt="apples01" /> <img src="https://food.tcg.mer.media/cards/bananas02.png" alt="bananas02" /> <img src="https://food.tcg.mer.media/cards/cauliflower03.png" alt="cauliflower03" /> 
+````
+
+It will not spit out the reward name.
+
+I don't remember what this one was used for in the past.
+
 ### Update randomizer (`random_update.php`)
 You will need to define the ``count`` and ``date`` parameters in the URL in order for the update randomizer to work. It will only work for the most recent update and will always pull only one from each deck recently released.
 
