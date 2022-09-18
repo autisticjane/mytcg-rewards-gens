@@ -3,7 +3,7 @@
 	include("$header");
 ?>
 <h1>HTML Generator</h1>
-<div class="random-generator">
+<div class="random-gen">
 	<form method="post" action="random_html.php?pickup">
 		<label for="cards">Your cards, separated by commas:</label>
 		<textarea name="cards" id="cards" style="width: 300px; height: 100px" placeholder="Your cards separated by commas"></textarea><br />
