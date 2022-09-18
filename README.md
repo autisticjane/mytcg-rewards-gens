@@ -66,7 +66,7 @@ Add this line to your header, between the ``<head>`` and ``</head>`` tags, somew
   <link rel="stylesheet" href="css/random-generators.css" type="text/css" media="screen">
 ````
 
-For consistency, every randomizer in this repository uses the following classes:
+For consistency, every randomizer in this repository uses the following selectors:
 
 ````
 .random-gen {}
